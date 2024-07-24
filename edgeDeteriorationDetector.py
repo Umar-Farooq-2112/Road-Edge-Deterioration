@@ -249,24 +249,24 @@ def edgeDeteriorationDetector(image,mask,pixel_per_mm,edge_threshold=50,deterior
 
 
 
-### Ignore the Code Below
-masks = []
-names = []
-scale = []
-for j in range(1,6):
-# j=5
-    for i in range (0,10):
-        names.append(f'Dataset/images{j}/0000000{i}.png')
-        masks.append(f'Dataset/masks{j}/0000000{i}.png')
-        scale.append(f'Dataset/images{j}/imageScale.npy')
-    for i in range (0,6):
-        names.append(f'Dataset/images{j}/0000001{i}.png')
-        masks.append(f'Dataset/masks{j}/0000001{i}.png')
-        scale.append(f'Dataset/images{j}/imageScale.npy')
+# ### Ignore the Code Below
+# masks = []
+# names = []
+# scale = []
+# for j in range(1,6):
+# # j=5
+#     for i in range (0,10):
+#         names.append(f'Dataset/images{j}/0000000{i}.png')
+#         masks.append(f'Dataset/masks{j}/0000000{i}.png')
+#         scale.append(f'Dataset/images{j}/imageScale.npy')
+#     for i in range (0,6):
+#         names.append(f'Dataset/images{j}/0000001{i}.png')
+#         masks.append(f'Dataset/masks{j}/0000001{i}.png')
+#         scale.append(f'Dataset/images{j}/imageScale.npy')
 
-for j in range(3):
-    for i in range(len(names)):
-        image = cv2.imread(names[i])
-        mask = cv2.imread(masks[i])
-        mmperpx = np.load(scale[i])
-        print(f"{names[i]}:    {edgeDeteriorationDetector(image,mask,1/mmperpx,50,80,j)}")
+# for j in range(3):
+#     for i in range(len(names)):
+#         image = cv2.imread(names[i])
+#         mask = cv2.imread(masks[i])
+#         mmperpx = np.load(scale[i])
+#         print(f"{names[i]}:    {edgeDeteriorationDetector(image,mask,1/mmperpx,50,80,j)}")
