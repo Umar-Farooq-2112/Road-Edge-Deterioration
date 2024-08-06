@@ -44,7 +44,7 @@ def first_nonzero_indices(arr):
     return indices
 
 
-def resize_image(image, scale_percent):
+def resize_image(image, scale_percent=20):
     width = int(image.shape[1] * scale_percent / 100)
     height = int(image.shape[0] * scale_percent / 100)
     return cv2.resize(image, (width, height), interpolation=cv2.INTER_AREA)    
